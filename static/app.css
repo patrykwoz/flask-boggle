@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "DM Mono";
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    height: 100vh;
+    position: relative;
+}
+
+h1{
+    color: rgb(0, 61, 117);
+    margin-bottom: 15px;
+}
+.boggle-board{
+    background-color: rgb(0, 132, 255);
+    border: 2px solid rgb(0, 132, 255);
+    border-radius: 10px;
+}
+
+.boggle-cell{
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    font-weight: bolder;
+    text-align: center;
+    font-family: "DM Mono";
+    color: rgb(0, 61, 117);
+}
+
+.boggle-cell:hover{
+    background-color: cyan;
+    cursor: pointer;
+}
+
+.warning{
+    color: red;
+}
+
+.victory{
+    color: green;
+}
+
+.game-finished-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.81);
+    color: rgb(0, 61, 117);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.game-finished-container button{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid  rgb(0, 132, 255);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    color: rgb(0, 61, 117);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.game-finished-container button:hover{
+    background-color: cyan;
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Play Boggle</h1>
+    <div class="stats-container">
+        <div id="highest-score">Highest score: {{ session.get('highest_score',0) }}</div>
+        <div id="game-count">Game count: {{ session.get('count_games',0) }}</div>
+        <div id="current-score"><p>Your score is 0</p></div>
+        <div id="timer"></div>
+    </div>
+    <a href="/handle-reset"><button id="reset-button">Reset</button></a>
+    <table class="boggle-board">
+        {% for row in board %}
+            <tr class="boggle-row">
+                {% for cell in row %}
+                    <td class="boggle-cell">{{ cell }}</td>
+
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <form action="/handle-response" method="post" id="user-guess-form">
+        <input type="text" placeholder="Input guess" name="user-guess" id="user-guess">
+        <button>Submit</button>
+    </form>
+    <div id="guess-response">
+
+    </div>
+{% endblock %}
